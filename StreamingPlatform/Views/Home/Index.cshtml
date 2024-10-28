@@ -1,8 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿@model dynamic
+<h2>Dashboard</h2>
+<p>Number of Artists: @Model.ArtistsCount</p>
+<p>Number of Genres: @Model.GenresCount</p>
+<p>Number of Songs: @Model.SongsCount</p>

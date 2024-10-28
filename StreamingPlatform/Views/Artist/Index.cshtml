@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Artist>
+<h2>Artists</h2>
+<a href="/Artist/Create">Add New Artist</a>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var artist in Model)
+    {
+        <tr>
+            <td>@artist.Title</td>
+            <td>@artist.Description</td>
+            <td>
+                <a href="/Artist/Edit/@artist.Id">Edit</a> |
+                <a href="/Artist/Delete/@artist.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
